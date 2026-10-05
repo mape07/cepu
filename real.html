@@ -1,1 +1,160 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autopartes en Bogotá | Repuestos con garantía</title>
+  <meta name="description" content="Autopartes y repuestos de carro en Bogotá. Frenos, filtros, suspensión y baterías. Cotiza por WhatsApp. Políticas de datos, garantía y devoluciones." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#122033;--orange:#e85d04;--bg:#f4f6f8;--muted:#5c6772;--line:#e2e6eb;--shadow:0 16px 40px rgba(18,32,51,.12)}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:#14202c;line-height:1.55}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .wrap{width:min(1120px,calc(100% - 32px));margin-inline:auto}
+    header{position:sticky;top:0;z-index:40;background:rgba(18,32,51,.95)}
+    .nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{color:#fff;font-weight:800;display:flex;align-items:center;gap:8px}
+    .mark{width:34px;height:34px;border-radius:8px;background:var(--orange);display:grid;place-items:center;color:#fff}
+    .links{display:flex;gap:18px;color:#d5dde6;font-size:14px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;padding:12px 18px;font-weight:700;font-family:inherit;cursor:pointer}
+    .btn-o{background:var(--orange);color:#fff}
+    .btn-wa{background:#25D366;color:#fff}
+    .hero{position:relative;color:#fff}
+    .hero-bg{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,18,30,.9),rgba(10,18,30,.4)),url("img/frenos.jpg") center/cover no-repeat}
+    .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:56px 0;align-items:center}
+    .kicker{color:#ffb089;font-size:12px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+    h1{font-size:clamp(32px,5vw,50px);line-height:1.08;margin:8px 0 12px}
+    .lead{color:#d7e0ea;max-width:520px}
+    .card{background:#fff;color:#14202c;border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+    label{display:block;font-size:13px;font-weight:600;margin:10px 0 5px}
+    input,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font:inherit}
+    section{padding:64px 0}
+    .head{text-align:center;max-width:640px;margin:0 auto 28px}
+    .head h2{font-size:clamp(26px,4vw,36px);color:var(--navy)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .svc{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+    .svc img{height:150px;width:100%;object-fit:cover}
+    .svc div{padding:14px}
+    .svc p{color:var(--muted);font-size:14px}
+    .cities{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+    .city{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px}
+    footer{background:var(--navy);color:#c5d0dc;padding:28px 0;font-size:14px}
+    .foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    .foot a{color:#ffb089}
+    .wa{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;font-size:26px}
+    @media(max-width:900px){.links{display:none}.hero-grid,.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#inicio"><span class="mark">AP</span> Autopartes Bogotá</a>
+      <nav class="links">
+        <a href="#repuestos">Repuestos</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="politicas.html">Políticas</a>
+      </nav>
+      <a class="btn btn-o" href="#cotizar">Cotizar</a>
+    </div>
+  </header>
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="kicker">Repuestos · Bogotá</div>
+        <h1>Autopartes para tu carro, con garantía.</h1>
+        <p class="lead">Frenos, filtros, suspensión, baterías y más. Te cotizamos por referencia o por marca, modelo y año. Entrega en Bogotá.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:20px">
+          <a class="btn btn-o" href="#cotizar">Pedir cotización</a>
+          <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20quiero%20cotizar%20un%20repuesto%20en%20Bogot%C3%A1" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+      <form class="card" id="leadForm">
+        <h3>Cotiza tu repuesto</h3>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" required placeholder="Tu nombre">
+        <label for="telefono">WhatsApp</label>
+        <input id="telefono" required placeholder="300 000 0000">
+        <label for="auto">Marca, modelo y año</label>
+        <input id="auto" placeholder="Ej. Chevrolet Sail 2016">
+        <label for="pieza">Qué pieza buscas</label>
+        <select id="pieza">
+          <option>Frenos</option>
+          <option>Filtros y aceite</option>
+          <option>Suspensión</option>
+          <option>Batería</option>
+          <option>Luces</option>
+          <option>Otro repuesto</option>
+        </select>
+        <label for="zona">Localidad</label>
+        <input id="zona" placeholder="Kennedy, Suba, Chapinero...">
+        <label style="font-weight:500;display:flex;gap:8px;align-items:flex-start">
+          <input id="acepto" type="checkbox" required style="width:auto;margin-top:4px">
+          <span>Acepto la <a href="politicas.html#datos" style="color:var(--orange)">política de datos</a> (Ley 1581).</span>
+        </label>
+        <button class="btn btn-o" type="submit" style="width:100%;margin-top:12px">Enviar cotización</button>
+      </form>
+    </div>
+  </section>
+  <section id="repuestos">
+    <div class="wrap">
+      <div class="head"><h2>Repuestos que manejamos</h2><p style="color:var(--muted)">Cotización según referencia. Precio antes de despachar.</p></div>
+      <div class="grid">
+        <article class="svc"><img src="img/frenos.jpg" alt="Frenos"><div><h3>Frenos</h3><p>Pastillas, discos y líquido. Para carros de uso diario en Bogotá.</p></div></article>
+        <article class="svc"><img src="img/taller-hero.jpg" alt="Suspensión"><div><h3>Suspensión y filtros</h3><p>Amortiguadores, bases, filtros de aire, aceite y combustible.</p></div></article>
+        <article class="svc"><img src="img/baterias.jpg" alt="Baterías"><div><h3>Baterías y eléctrico</h3><p>Batería 12V, bombillos y piezas de arranque según tu carro.</p></div></article>
+      </div>
+    </div>
+  </section>
+  <section id="cobertura">
+    <div class="wrap">
+      <div class="head"><h2>Cobertura en Bogotá</h2></div>
+      <div class="cities">
+        <span class="city">Chapinero</span><span class="city">Usaquén</span><span class="city">Suba</span>
+        <span class="city">Engativá</span><span class="city">Kennedy</span><span class="city">Fontibón</span>
+        <span class="city">Teusaquillo</span><span class="city">Centro</span><span class="city">Soacha</span>
+        <span class="city">Chía</span><span class="city">Cajicá</span>
+      </div>
+    </div>
+  </section>
+  <section id="cotizar" style="background:#fff;text-align:center">
+    <div class="wrap">
+      <h2 style="color:var(--navy)">¿Tienes la referencia?</h2>
+      <p style="color:var(--muted);margin:8px auto 16px">Mándala por WhatsApp y te respondemos disponibilidad.</p>
+      <a class="btn btn-wa" href="https://wa.me/573001112233?text=Hola%2C%20quiero%20cotizar%20un%20repuesto%20en%20Bogot%C3%A1" target="_blank" rel="noopener">Escribir ahora</a>
+    </div>
+  </section>
+  <footer>
+    <div class="wrap foot">
+      <div><strong style="color:#fff">Autopartes Bogotá</strong><br>Repuestos de carro</div>
+      <div>
+        <a href="politicas.html#datos">Datos personales</a> ·
+        <a href="politicas.html#terminos">Términos</a> ·
+        <a href="politicas.html#cookies">Cookies</a> ·
+        <a href="politicas.html#garantia">Garantía</a> ·
+        <a href="politicas.html#devoluciones">Devoluciones</a>
+      </div>
+      <div>Cambia el 300 111 2233 antes de publicar</div>
+    </div>
+  </footer>
+  <a class="wa" href="https://wa.me/573001112233?text=Hola%2C%20quiero%20cotizar%20un%20repuesto%20en%20Bogot%C3%A1" target="_blank" rel="noopener">✆</a>
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!document.getElementById('acepto').checked) return;
+      const t = encodeURIComponent(
+        'Hola, soy ' + document.getElementById('nombre').value.trim() +
+        '. Quiero cotizar un repuesto en Bogotá.\nWhatsApp: ' + document.getElementById('telefono').value.trim() +
+        '\nAuto: ' + document.getElementById('auto').value.trim() +
+        '\nPieza: ' + document.getElementById('pieza').value +
+        '\nZona: ' + document.getElementById('zona').value.trim() +
+        '\nAcepto política de datos.'
+      );
+      window.open('https://wa.me/573001112233?text=' + t, '_blank');
+    });
+  </script>
+</body>
+</html>
